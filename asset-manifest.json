@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Shopper/static/css/main.8d444244.css",
+    "main.js": "/Shopper/static/js/main.ed833a27.js",
+    "static/media/hero_image.png": "/Shopper/static/media/hero_image.505e7f2b6c56573319ac.png",
+    "index.html": "/Shopper/index.html",
+    "main.8d444244.css.map": "/Shopper/static/css/main.8d444244.css.map",
+    "main.ed833a27.js.map": "/Shopper/static/js/main.ed833a27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d444244.css",
+    "static/js/main.ed833a27.js"
+  ]
+}
