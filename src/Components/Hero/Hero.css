@@ -1,0 +1,138 @@
+.hero {
+  background-image: linear-gradient(
+    to bottom,
+    #f9a0c4 0%,
+    #f9a0c4 25%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  bottom: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 40px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.hero-left,
+.hero-right {
+  max-width: 600px;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hero-left h2 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #666;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.hero-left-content {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: "Montserrat", sans-serif;
+
+  color: #333;
+  margin: 0;
+}
+
+.hero-left button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-left button:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: absolute;
+  top: 15%;
+  right: 15%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 20px 15px;
+  }
+
+  .hero-left {
+    align-items: center;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+
+  .hero-left-content {
+    font-size: 48px;
+  }
+
+  .hero-left button {
+    font-size: 20px;
+    padding: 16px 32px;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left h2 {
+    font-size: 18px;
+  }
+
+  .hero-left-content {
+    font-size: 36px;
+  }
+
+  .hero-left button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+}
