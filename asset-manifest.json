@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Shopper/static/css/main.59fad902.css",
-    "main.js": "/Shopper/static/js/main.4b5b6c34.js",
+    "main.css": "/Shopper/static/css/main.5c600d67.css",
+    "main.js": "/Shopper/static/js/main.7bbf133a.js",
     "static/media/hero_image2.png": "/Shopper/static/media/hero_image2.78688869284ff37a8411.png",
     "static/media/product_8.png": "/Shopper/static/media/product_8.2cf4747c23b5e634072c.png",
     "static/media/product_12.png": "/Shopper/static/media/product_12.f0cbe3b14beeee568f3a.png",
@@ -12,12 +12,16 @@
     "static/media/product_28.png": "/Shopper/static/media/product_28.04b01625e212ebb2534e.png",
     "static/media/product_35.png": "/Shopper/static/media/product_35.073b8b5de77cfc979821.png",
     "static/media/hero_image.png": "/Shopper/static/media/hero_image.505e7f2b6c56573319ac.png",
+    "static/media/apple-pay-svgrepo-com.svg": "/Shopper/static/media/apple-pay-svgrepo-com.2ac422cf7f6c2b8c0d4f4915fcb6f567.svg",
+    "static/media/paypal-svgrepo-com.svg": "/Shopper/static/media/paypal-svgrepo-com.9eedfc4951e06e473c4761c1605fd292.svg",
+    "static/media/visa-svgrepo-com.svg": "/Shopper/static/media/visa-svgrepo-com.51c225335481dc0cb7cfa09c0bdbd4de.svg",
+    "static/media/mastercard-svgrepo-com.svg": "/Shopper/static/media/mastercard-svgrepo-com.5f0822af68784bc769ad6f157e428904.svg",
     "index.html": "/Shopper/index.html",
-    "main.59fad902.css.map": "/Shopper/static/css/main.59fad902.css.map",
-    "main.4b5b6c34.js.map": "/Shopper/static/js/main.4b5b6c34.js.map"
+    "main.5c600d67.css.map": "/Shopper/static/css/main.5c600d67.css.map",
+    "main.7bbf133a.js.map": "/Shopper/static/js/main.7bbf133a.js.map"
   },
   "entrypoints": [
-    "static/css/main.59fad902.css",
-    "static/js/main.4b5b6c34.js"
+    "static/css/main.5c600d67.css",
+    "static/js/main.7bbf133a.js"
   ]
 }
