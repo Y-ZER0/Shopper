@@ -1,14 +1,6 @@
 .hero {
-  background-image: linear-gradient(
-    to bottom,
-    #f9a0c4 0%,
-    #f9a0c4 25%,
-    #ffffff 75%,
-    #ffffff 100%
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(180deg, #efa6a6, #e1ffea22 80%);
+
   position: relative;
   bottom: 160px;
   display: flex;
@@ -58,8 +50,8 @@
   background-color: #ff6b6b;
   color: white;
   border: none;
-  padding: 18px 36px;
-  font-size: 22px;
+  padding: 14px 28px;
+  font-size: 18px;
   font-weight: 500;
   border-radius: 30px;
   cursor: pointer;
@@ -113,8 +105,8 @@
   }
 
   .hero-left button {
-    font-size: 20px;
-    padding: 16px 32px;
+    font-size: 18px;
+    padding: 14px 28px;
   }
 
   .hero-right {
@@ -132,7 +124,7 @@
   }
 
   .hero-left button {
-    padding: 14px 28px;
-    font-size: 18px;
+    padding: 12px 24px;
+    font-size: 16px;
   }
 }
