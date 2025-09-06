@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/Shopper/static/css/main.8d444244.css",
-    "main.js": "/Shopper/static/js/main.ed833a27.js",
+    "main.css": "/Shopper/static/css/main.59fad902.css",
+    "main.js": "/Shopper/static/js/main.4b5b6c34.js",
+    "static/media/hero_image2.png": "/Shopper/static/media/hero_image2.78688869284ff37a8411.png",
+    "static/media/product_8.png": "/Shopper/static/media/product_8.2cf4747c23b5e634072c.png",
+    "static/media/product_12.png": "/Shopper/static/media/product_12.f0cbe3b14beeee568f3a.png",
+    "static/media/product_17.png": "/Shopper/static/media/product_17.637306928b484789783c.png",
+    "static/media/product_15.png": "/Shopper/static/media/product_15.e19a5d0cbca1a637da1d.png",
+    "static/media/product_2.png": "/Shopper/static/media/product_2.d4e74f367160ec10fb34.png",
+    "static/media/product_14.png": "/Shopper/static/media/product_14.097d9d7b9f1c85e4e293.png",
+    "static/media/product_28.png": "/Shopper/static/media/product_28.04b01625e212ebb2534e.png",
+    "static/media/product_35.png": "/Shopper/static/media/product_35.073b8b5de77cfc979821.png",
     "static/media/hero_image.png": "/Shopper/static/media/hero_image.505e7f2b6c56573319ac.png",
     "index.html": "/Shopper/index.html",
-    "main.8d444244.css.map": "/Shopper/static/css/main.8d444244.css.map",
-    "main.ed833a27.js.map": "/Shopper/static/js/main.ed833a27.js.map"
+    "main.59fad902.css.map": "/Shopper/static/css/main.59fad902.css.map",
+    "main.4b5b6c34.js.map": "/Shopper/static/js/main.4b5b6c34.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d444244.css",
-    "static/js/main.ed833a27.js"
+    "static/css/main.59fad902.css",
+    "static/js/main.4b5b6c34.js"
   ]
 }
