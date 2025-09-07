@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Shopper/static/css/main.bd2b1536.css",
-    "main.js": "/Shopper/static/js/main.ac3fec22.js",
+    "main.css": "/Shopper/static/css/main.7e10a35d.css",
+    "main.js": "/Shopper/static/js/main.5becb95f.js",
     "static/media/banner_kids.png": "/Shopper/static/media/banner_kids.fff815a581793a7380fb.png",
     "static/media/banner_women.png": "/Shopper/static/media/banner_women.5a27fc4e4533e57e4676.png",
     "static/media/banner_mens.png": "/Shopper/static/media/banner_mens.eed7197157196f319b17.png",
@@ -48,11 +48,11 @@
     "static/media/visa-svgrepo-com.svg": "/Shopper/static/media/visa-svgrepo-com.51c225335481dc0cb7cfa09c0bdbd4de.svg",
     "static/media/mastercard-svgrepo-com.svg": "/Shopper/static/media/mastercard-svgrepo-com.5f0822af68784bc769ad6f157e428904.svg",
     "index.html": "/Shopper/index.html",
-    "main.bd2b1536.css.map": "/Shopper/static/css/main.bd2b1536.css.map",
-    "main.ac3fec22.js.map": "/Shopper/static/js/main.ac3fec22.js.map"
+    "main.7e10a35d.css.map": "/Shopper/static/css/main.7e10a35d.css.map",
+    "main.5becb95f.js.map": "/Shopper/static/js/main.5becb95f.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd2b1536.css",
-    "static/js/main.ac3fec22.js"
+    "static/css/main.7e10a35d.css",
+    "static/js/main.5becb95f.js"
   ]
 }
