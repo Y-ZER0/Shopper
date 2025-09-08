@@ -9,11 +9,31 @@ export const ShopContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addcart = (product) => {
-    setCart([...cart, product]);
+    if (cart.find((item) => item.id === product.id)) {
+      setCart(
+        cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
   };
 
   const deletecart = (product) => {
-    setCart(cart.filter((item) => item.id !== product.id));
+    if (product.quantity > 1) {
+      setCart(
+        cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+      );
+    } else {
+      setCart(cart.filter((item) => item.id !== product.id));
+    }
   };
 
   const contextValue = { all_products, addcart, deletecart, cart };

@@ -8,13 +8,13 @@ export default function CartItem({ item }) {
   return (
     <div className="cart-item">
       <img src={item.image} alt={item.name} />
-      <h3>{item.name}</h3>
-      <span>${item.new_price}</span>
-      <div>
-        Quantity: <input type="number" readOnly value={item.quantity} />
-      </div>
-      <div>Total: ${item.new_price * item.quantity}</div>
-      <button onClick={() => deletecart(item)}>X</button>
+      <p>{item.name}</p>
+      <span>${item.new_price.toFixed(2)}</span>
+      <span>{item.quantity}</span>
+      <div>${(item.new_price * item.quantity).toFixed(2)}</div>
+      <button onClick={() => deletecart(item)} title="Remove item">
+        ×
+      </button>
     </div>
   );
 }

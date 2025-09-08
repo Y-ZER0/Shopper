@@ -25,6 +25,7 @@ function Navbar() {
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
     setIsMenuOpen(false); // Close mobile menu on selection
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -73,7 +74,12 @@ function Navbar() {
           <button onClick={() => handleMenuClick("Login")}>Login</button>
         </Link>
 
-        <Link to="/cart" style={linkStyle} aria-label="Shopping cart">
+        <Link
+          to="/cart"
+          style={linkStyle}
+          aria-label="Shopping cart"
+          onClick={() => handleMenuClick("Cart")}
+        >
           <img src={cart_icon} alt="" />
           <div className="nav-cart-count">{cart.length}</div>
         </Link>

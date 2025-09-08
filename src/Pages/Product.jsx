@@ -11,6 +11,11 @@ import "./CSS/Product.css";
 export default function Product() {
   const { addcart } = useContext(ShopContext);
 
+  const handleAddToCart = (product) => {
+    addcart(product);
+    window.scrollTo(0, 0);
+  };
+
   const location = useLocation();
   const product = location.state?.product;
 
@@ -61,7 +66,9 @@ export default function Product() {
           <button>XXL</button>
           <div className="Cart-Submit">
             <Link to="/cart">
-              <button onClick={() => addcart(product)}>Add to Cart</button>
+              <button onClick={() => handleAddToCart(product)}>
+                Add to Cart
+              </button>
             </Link>
           </div>
           <p>
