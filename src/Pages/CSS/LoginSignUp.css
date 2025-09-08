@@ -1,17 +1,14 @@
-/* LoginSignUp.css - Fixed Layout */
-
 .login-signup-page {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 50%, #fff5f5 100%);
-  padding: 10px;
   box-sizing: border-box;
   position: relative;
+  margin: -50px;
 }
 
-/* Background decorative elements */
 .login-signup-page::before {
   content: "";
   position: absolute;
@@ -38,10 +35,6 @@
 }
 
 .login-signup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   padding: 30px 40px;
@@ -62,7 +55,6 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Form heading styles */
 .login-signup h1,
 .login-signup h2 {
   font-family: "Playfair Display", serif;
@@ -78,7 +70,6 @@
   letter-spacing: -0.5px;
 }
 
-/* Input field styling - targeting TextInput component */
 input,
 .text-input input {
   width: 100%;
@@ -117,7 +108,6 @@ input:hover,
   border-color: #bdc3c7;
 }
 
-/* Main button styling (Continue button) */
 .login-signup > button {
   background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
   color: white;
@@ -170,7 +160,6 @@ input:hover,
   transform: translateY(0);
 }
 
-/* Toggle text and button styling */
 .login-signup p {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -181,7 +170,6 @@ input:hover,
   letter-spacing: 0.3px;
 }
 
-/* Toggle button styling for inline buttons */
 .login-signup p button {
   background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
   color: white;
@@ -205,7 +193,6 @@ input:hover,
   background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
 }
 
-/* Checkbox styling */
 .login-signup .checkbox-container {
   display: flex;
   align-items: center;
@@ -244,7 +231,6 @@ input:hover,
   text-decoration: underline;
 }
 
-/* Error/Success messages */
 .login-signup .message {
   padding: 12px 16px;
   border-radius: 8px;
@@ -266,7 +252,6 @@ input:hover,
   border: 1px solid rgba(40, 167, 69, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .login-signup-page {
     padding: 8px;
@@ -332,7 +317,6 @@ input:hover,
   }
 }
 
-/* Loading state for main button */
 .login-signup > button:disabled {
   opacity: 0.7;
   cursor: not-allowed;

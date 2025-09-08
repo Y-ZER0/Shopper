@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import logo from "../assets/logo.png";
 import cart_icon from "../assets/cart_icon.png";
+import ShopContext from "../../Context/ShopContext";
 
 const NAVIGATION_ITEMS = [
   { label: "Shop", path: "/" },
@@ -14,6 +15,8 @@ const NAVIGATION_ITEMS = [
 const linkStyle = { textDecoration: "none", color: "inherit" };
 
 function Navbar() {
+  const { cart } = useContext(ShopContext);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("Shop");
 
@@ -72,7 +75,7 @@ function Navbar() {
 
         <Link to="/cart" style={linkStyle} aria-label="Shopping cart">
           <img src={cart_icon} alt="" />
-          <div className="nav-cart-count">0</div>
+          <div className="nav-cart-count">{cart.length}</div>
         </Link>
       </div>
     </nav>

@@ -6,6 +6,7 @@ let data_product = [
       "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=350&h=418&fit=crop&crop=center",
     new_price: 45.0,
     old_price: 65.0,
+    category: "men",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ let data_product = [
       "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=350&h=418&fit=crop&crop=center",
     new_price: 55.0,
     old_price: 80.0,
+    category: "men",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ let data_product = [
       "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=350&h=418&fit=crop&crop=center",
     new_price: 65.0,
     old_price: 95.0,
+    category: "men",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ let data_product = [
       "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=350&h=418&fit=crop&crop=center",
     new_price: 85.0,
     old_price: 120.0,
+    category: "men",
   },
 ];
 

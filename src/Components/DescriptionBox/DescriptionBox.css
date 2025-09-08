@@ -1,0 +1,23 @@
+.description-box {
+  display: flex;
+  margin: 40px 30px;
+}
+
+.description-tab {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.reviews-tab {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: rgb(226, 221, 221);
+}
+
+.description-content {
+  display: flex;
+  padding: 30px;
+  flex: 2;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+}
