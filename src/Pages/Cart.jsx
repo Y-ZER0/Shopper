@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "./CSS/Cart.css";
 import { useContext } from "react";
 import ShopContext from "../Context/ShopContext";
-import CartItem from "../Components/CartItem/CartItem";
-import CartBill from "../Components/CartBill";
-import Coupon from "../Components/Coupon";
+import CartItem from "../Components/CartParts/CartItem";
+import CartBill from "../Components/CartParts/CartBill";
 
 export default function Cart() {
-  const { cart } = useContext(ShopContext);
+  const { cart, clearCart } = useContext(ShopContext);
   const [couponCode, setCouponCode] = useState("");
   const [couponMessage, setCouponMessage] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
@@ -31,6 +30,13 @@ export default function Cart() {
     }
   };
 
+  const handleClearCart = () => {
+    clearCart();
+    setCouponCode("");
+    setCouponMessage("");
+    setCouponApplied(false);
+  };
+
   if (cart.length === 0) {
     return (
       <section className="cart">
@@ -50,7 +56,6 @@ export default function Cart() {
         <h4>Price</h4>
         <h4>Quantity</h4>
         <h4>Total</h4>
-        <h4>Remove</h4>
       </div>
 
       <hr />
@@ -61,20 +66,49 @@ export default function Cart() {
         ))}
       </div>
 
-      <CartBill
-        subtotal={subtotal}
-        couponApplied={couponApplied}
-        discount={discount}
-        total={total}
-      />
+      <div className="cart-bottom-section">
+        <div className="coupon-section">
+          <h3>Have a Coupon?</h3>
+          <div className="coupon-input-group">
+            <input
+              type="text"
+              className="coupon-input"
+              placeholder="Enter coupon code"
+              value={couponCode}
+              onChange={(e) => setCouponCode(e.target.value)}
+            />
+            <button className="coupon-btn" onClick={handleCouponApply}>
+              Apply
+            </button>
+          </div>
+          {couponMessage && (
+            <div
+              className={`coupon-message ${
+                couponApplied ? "coupon-success" : "coupon-error"
+              }`}
+            >
+              {couponMessage}
+            </div>
+          )}
 
-      <Coupon
-        couponCode={couponCode}
-        setCouponCode={setCouponCode}
-        handleCouponApply={handleCouponApply}
-        couponMessage={couponMessage}
-        couponApplied={couponApplied}
-      />
+          <div className="clear-cart-section">
+            <button
+              className="clear-cart-btn"
+              onClick={handleClearCart}
+              title="Clear all items from cart"
+            >
+              🗑️ Clear Cart
+            </button>
+          </div>
+        </div>
+
+        <CartBill
+          subtotal={subtotal}
+          couponApplied={couponApplied}
+          discount={discount}
+          total={total}
+        />
+      </div>
     </section>
   );
 }

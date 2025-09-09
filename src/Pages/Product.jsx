@@ -9,10 +9,10 @@ import { Link } from "react-router-dom";
 import "./CSS/Product.css";
 
 export default function Product() {
-  const { addcart } = useContext(ShopContext);
+  const { addToCart } = useContext(ShopContext);
 
   const handleAddToCart = (product) => {
-    addcart(product);
+    addToCart(product);
     window.scrollTo(0, 0);
   };
 

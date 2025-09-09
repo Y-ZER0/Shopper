@@ -1,6 +1,5 @@
 .hero {
   background: linear-gradient(180deg, #efa6a6, #e1ffea22 80%);
-
   position: relative;
   bottom: 160px;
   display: flex;
@@ -41,7 +40,6 @@
   font-weight: 700;
   line-height: 1.1;
   font-family: "Montserrat", sans-serif;
-
   color: #333;
   margin: 0;
 }
@@ -83,17 +81,57 @@
   right: 15%;
 }
 
-/* Responsive Design */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero {
+    gap: 30px;
+    padding: 20px 15px;
+    bottom: 120px;
+  }
+
+  .hero-left-content {
+    font-size: 56px;
+  }
+
+  .hero-left h2 {
+    font-size: 22px;
+  }
+
+  .hero-right img {
+    top: 10%;
+    right: 0%;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;
     gap: 30px;
     padding: 20px 15px;
+    bottom: 90px;
+    min-height: 90vh;
   }
 
   .hero-left {
     align-items: center;
+    order: 2;
+    max-width: 100%;
+    position: relative;
+    bottom: 100px;
+  }
+
+  .hero-right {
+    order: 1;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .hero-right img {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 
   .hero-left h2 {
@@ -102,29 +140,187 @@
 
   .hero-left-content {
     font-size: 48px;
+    text-align: center;
+    position: relative;
   }
 
   .hero-left button {
     font-size: 18px;
     padding: 14px 28px;
   }
+}
+
+@media (max-width: 640px) and (min-width: 481px) {
+  .hero {
+    bottom: 60px;
+    gap: 25px;
+    padding: 15px 12px;
+    min-height: 85vh;
+  }
+
+  .hero-left {
+    gap: 18px;
+  }
+
+  .hero-left h2 {
+    font-size: 19px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-left-content {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .hero-left button {
+    font-size: 17px;
+    padding: 13px 26px;
+  }
 
   .hero-right {
-    order: -1;
+    max-width: 350px;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    bottom: 40px;
+    gap: 20px;
+    padding: 15px 10px;
+    min-height: 80vh;
+  }
+
+  .hero-left {
+    gap: 16px;
+  }
+
   .hero-left h2 {
     font-size: 18px;
+    letter-spacing: 1px;
   }
 
   .hero-left-content {
     font-size: 36px;
+    line-height: 1.2;
   }
 
   .hero-left button {
     padding: 12px 24px;
     font-size: 16px;
+  }
+
+  .hero-right {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 321px) {
+  .hero {
+    bottom: 30px;
+    gap: 18px;
+    padding: 12px 8px;
+    min-height: 75vh;
+  }
+
+  .hero-left {
+    gap: 14px;
+  }
+
+  .hero-left h2 {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+  }
+
+  .hero-left-content {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-left button {
+    padding: 11px 22px;
+    font-size: 15px;
+  }
+
+  .hero-right {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    bottom: 20px;
+    gap: 15px;
+    padding: 10px 6px;
+    min-height: 70vh;
+  }
+
+  .hero-left {
+    gap: 12px;
+  }
+
+  .hero-left h2 {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-left-content {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .hero-left button {
+    padding: 10px 20px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-right {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 280px) {
+  .hero {
+    bottom: 15px;
+    gap: 12px;
+    padding: 8px 4px;
+  }
+
+  .hero-left h2 {
+    font-size: 14px;
+  }
+
+  .hero-left-content {
+    font-size: 24px;
+  }
+
+  .hero-left button {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+
+  .hero-right {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-left button:hover {
+    transform: translateY(-1px);
+  }
+
+  .hero-left button {
+    min-height: 44px;
+    min-width: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-left button {
+    transition: none;
+  }
+
+  .hero-left button:hover {
+    transform: none;
   }
 }

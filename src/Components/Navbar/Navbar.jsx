@@ -28,12 +28,14 @@ function Navbar() {
     window.scrollTo(0, 0);
   };
 
+  const cartItemCount = cart?.length || 0;
+
   return (
     <nav className="navbar">
       {/* Logo Section */}
       <div className="nav-logo">
         <img src={logo} alt="Shopper logo" />
-        <Link to="/" style={linkStyle}>
+        <Link to="/" style={linkStyle} onClick={() => handleMenuClick("Shop")}>
           <p>SHOPPER</p>
         </Link>
       </div>
@@ -77,11 +79,14 @@ function Navbar() {
         <Link
           to="/cart"
           style={linkStyle}
-          aria-label="Shopping cart"
+          aria-label={`Shopping cart with ${cartItemCount} items`}
           onClick={() => handleMenuClick("Cart")}
+          className="cart-container"
         >
-          <img src={cart_icon} alt="" />
-          <div className="nav-cart-count">{cart.length}</div>
+          <img src={cart_icon} alt="Shopping cart" />
+          {cartItemCount > 0 && (
+            <div className="nav-cart-count">{cartItemCount}</div>
+          )}
         </Link>
       </div>
     </nav>
