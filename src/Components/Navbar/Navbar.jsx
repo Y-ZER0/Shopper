@@ -12,7 +12,13 @@ const NAVIGATION_ITEMS = [
   { label: "Kids", path: "/kids" },
 ];
 
-const linkStyle = { textDecoration: "none", color: "inherit" };
+const linkStyle = {
+  textDecoration: "none",
+  color: "inherit",
+  display: "block",
+  width: "100%",
+  height: "100%",
+};
 
 function Navbar() {
   const { cart } = useContext(ShopContext);
@@ -58,11 +64,11 @@ function Navbar() {
       {/* Navigation Menu */}
       <ul className={`nav-menu ${isMenuOpen ? "nav-menu-open" : ""}`}>
         {NAVIGATION_ITEMS.map(({ label, path }) => (
-          <li key={label} onClick={() => handleMenuClick(label)}>
+          <li key={label} className={activeMenu === label ? "active" : ""}>
             <Link
               to={path}
               style={linkStyle}
-              className={activeMenu === label ? "active" : ""}
+              onClick={() => handleMenuClick(label)}
             >
               {label}
             </Link>
@@ -72,13 +78,13 @@ function Navbar() {
 
       {/* Login & Cart Section */}
       <div className="nav-login-cart">
-        <Link to="/login" style={linkStyle}>
+        <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>
           <button onClick={() => handleMenuClick("Login")}>Login</button>
         </Link>
 
         <Link
           to="/cart"
-          style={linkStyle}
+          style={{ textDecoration: "none", color: "inherit" }}
           aria-label={`Shopping cart with ${cartItemCount} items`}
           onClick={() => handleMenuClick("Cart")}
           className="cart-container"

@@ -13,7 +13,7 @@ import kids_banner from "./Components/assets/banner_kids.png";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Shopper">
       <div>
         <Navbar />
         <Routes>
@@ -39,4 +39,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
 export default App;
