@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import hero_image from "../assets/hero_image.png";
 
-export default function Hero() {
+export default function Hero({ onScroll }) {
   return (
     <div className="hero">
       <div className="hero-left">
@@ -11,7 +11,7 @@ export default function Hero() {
           new👋 <br /> collections <br />
           for everyone
         </div>
-        <button>latest collection &rarr;</button>
+        <button onClick={onScroll}>latest collection &rarr;</button>
       </div>
       <div className="hero-right">
         <img src={hero_image} alt="Hero Banner" />

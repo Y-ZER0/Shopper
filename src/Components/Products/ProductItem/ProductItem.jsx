@@ -1,14 +1,8 @@
 import React from "react";
 
-export default function ProductItem({ item, onClick }) {
+export default function ProductItem({ item }) {
   return (
-    <div
-      className="products-item"
-      onClick={() => {
-        onClick(item);
-        window.scrollTo(0, 0);
-      }}
-    >
+    <div className="products-item">
       <img src={item.image} alt={item.name} />
       <h3>{item.name}</h3>
       <div className="products-item-price">

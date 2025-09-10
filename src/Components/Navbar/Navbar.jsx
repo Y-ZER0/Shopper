@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import logo from "../assets/logo.png";
 import cart_icon from "../assets/cart_icon.png";
@@ -41,9 +41,13 @@ function Navbar() {
       {/* Logo Section */}
       <div className="nav-logo">
         <img src={logo} alt="Shopper logo" />
-        <Link to="/" style={linkStyle} onClick={() => handleMenuClick("Shop")}>
+        <NavLink
+          to="/"
+          style={linkStyle}
+          onClick={() => handleMenuClick("Shop")}
+        >
           <p>SHOPPER</p>
-        </Link>
+        </NavLink>
       </div>
 
       {/* Mobile Menu Toggle */}
@@ -65,24 +69,27 @@ function Navbar() {
       <ul className={`nav-menu ${isMenuOpen ? "nav-menu-open" : ""}`}>
         {NAVIGATION_ITEMS.map(({ label, path }) => (
           <li key={label} className={activeMenu === label ? "active" : ""}>
-            <Link
+            <NavLink
               to={path}
               style={linkStyle}
               onClick={() => handleMenuClick(label)}
             >
               {label}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
 
       {/* Login & Cart Section */}
       <div className="nav-login-cart">
-        <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>
+        <NavLink
+          to="/login"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           <button onClick={() => handleMenuClick("Login")}>Login</button>
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/cart"
           style={{ textDecoration: "none", color: "inherit" }}
           aria-label={`Shopping cart with ${cartItemCount} items`}
@@ -93,7 +100,7 @@ function Navbar() {
           {cartItemCount > 0 && (
             <div className="nav-cart-count">{cartItemCount}</div>
           )}
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
